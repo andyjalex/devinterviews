@@ -5,8 +5,7 @@ import { useState } from "react";
 
 
 const navItems = [
-  { id: 1, href: "/events", label: "About" },
-  { id: 2, href: "/events", label: "Events" },
+  { id: 1, href: "/interviews", label: "Interviews" },
 ];
 export default function MainHeader() {
       const [isMenuOpen, setIsMenuOpen] = useState(false);
