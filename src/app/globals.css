@@ -24,3 +24,141 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  position: relative;
+  z-index: 20;
+}
+
+
+.menu-toggle {
+    display: inline-flex;
+    width: 3.75rem;
+    height: 3.75rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    border: none;
+    border-radius: 999px;
+    
+    color: #e5e5e1;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 1.15rem;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+  }
+
+  .mobile-nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+  }
+
+  .mobile-nav-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-nav-panel {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    width: min(20rem, 84vw);
+    height: 100svh;
+    padding: 1rem;
+    flex-direction: column;
+    background: #201919;
+    box-shadow: -24px 0 50px rgba(0, 0, 0, 0.35);
+    transform: translateX(100%);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 220ms ease;
+  }
+
+  .mobile-nav-panel.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .menu-close {
+    display: inline-flex;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #e5e5e1;
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+
+  #main-header .mobile-nav-panel ul {
+    display: flex;
+    margin: 2rem 0 0;
+    padding: 0;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+  }
+
+  #main-header .mobile-nav-panel ul a {
+    display: block;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 1.4rem;
+  }
+
+
+
+
+.col-left h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+}
+.col-left h2 {
+  font-size: 1.5rem;
+  width: 350px;
+}
+.col-left h3 {
+  font-size: 1.5rem;
+  width: 350px;
+}
+.col-left  h2, h3 {
+    margin-bottom: .5rem;
+}
+.col-right {
+  width: 50%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+
+
+#section2 h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+  color: black;
+}
+
